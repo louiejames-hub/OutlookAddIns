@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="MessageRead">
+
+    <Id>3ad7b17f-1618-4e97-bcbd-bd48930cdaca</Id>
+    <Version>1.0</Version>
+    <ProviderName>TestCom</ProviderName>
+    <DefaultLocale>en-US</DefaultLocale>
+    <DisplayName>External Email Warning</DisplayName>
+    <Description>Warn users before sending emails to external domains.</Description>
+
+    <Hosts>
+        <Host Name="Mailbox"/>
+    </Hosts>
+
+    <Requirements>
+        <Sets DefaultMinVersion="1.1">
+            <Set Name="Mailbox"/>
+        </Sets>
+    </Requirements>
+
+    <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" Version="1.0">
+        <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <SourceLocation DefaultValue="https://louiejames-hub.github.io/OutlookAddIns/"/>
+        </ExtensionPoint>
+    </VersionOverrides>
+
+</OfficeApp>

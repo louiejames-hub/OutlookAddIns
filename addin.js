@@ -7,7 +7,7 @@ function checkRecipients(eventArgs) {
     item.getRecipientsAsync((asyncResult) => {
         if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
             let recipients = asyncResult.value;
-            let organizationDomain = "@4h72mt.onmicrosoft.com"; // Change this to your actual domain
+            let organizationDomain = "4h72mt.onmicrosoft.com"; // Change this to your actual domain
 
             let externalRecipients = recipients.filter(recipient => 
                 !recipient.emailAddress.endsWith("@" + organizationDomain)
